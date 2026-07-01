@@ -1,26 +1,93 @@
 @import "tailwindcss";
+@import "swiper/css";
+@import "swiper/css/navigation";
+@import "swiper/css/pagination";
+@import "swiper/css/autoplay";
 
 :root {
+  /* Base */
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #0f172a;
+
+  /* Cards */
+  --card: #f8fafc;
+  --card-hover: #f1f5f9;
+
+  /* Border */
+  --border: #e2e8f0;
+
+  /* Brand */
+  --primary: #06b6d4;
+  --primary-hover: #0891b2;
+
+  /* Secondary */
+  --secondary: #64748b;
+
+  /* Text */
+  --muted: #64748b;
+
+  /* Shadows */
+  --shadow: rgba(0, 0, 0, 0.08);
+
+   --hero-overlay: rgba(84, 67, 67, 0);
+
+  --hero-gradient: linear-gradient(
+    to right,
+    rgba(72, 49, 49, 0.4),
+    rgba(87, 52, 52, 0.45),
+    transparent
+  );
+
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+.dark {
+  --background: #09090b;
+
+  --foreground: #ffffff;
+
+  --card: #18181b;
+
+  --card-hover: #27272a;
+
+  --border: rgba(255, 255, 255, 0.1);
+
+  --primary: #22d3ee;
+
+  --primary-hover: #06b6d4;
+
+  --secondary: #a1a1aa;
+
+  --muted: #9ca3af;
+
+  --shadow: rgba(0, 0, 0, 0.5);
+
+
+
+  --hero-overlay: rgba(255, 255, 255, 0.1);
+
+  --hero-gradient: linear-gradient(
+    to right,
+    rgba(108, 71, 71, 0.5),
+    rgba(91, 75, 75, 0.3),
+    transparent
+  );
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
 
 body {
-  background: var(--background);
+   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-body);
+   transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-heading);
 }
