@@ -10,6 +10,12 @@ import {
   Church,
 } from "lucide-react";
 
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Pagination, Autoplay } from "swiper/modules";
+
+import "swiper/css";
+import "swiper/css/pagination";
+
 import Container from "@/components/common/Container";
 import SectionHeading from "@/components/common/SectionHeading";
 
@@ -52,52 +58,91 @@ const services = [
   },
 ];
 
+const card = (service: (typeof services)[0]) => {
+  const Icon = service.icon;
+
+  return (
+    <motion.div
+      whileHover={{
+        y: -8,
+        scale: 1.02,
+      }}
+      transition={{
+        type: "spring",
+        stiffness: 300,
+        damping: 22,
+      }}
+      className="group h-full rounded-3xl border border-(--border) bg-(--card) p-8 transition-all duration-300 hover:shadow-2xl"
+    >
+      <div className="mb-6 flex h-16 w-16 items-center justify-center rounded-2xl bg-cyan-500/10">
+        <Icon size={34} className="text-(--primary)" />
+      </div>
+
+      <h3 className="mb-4 text-2xl font-semibold text-(--foreground)">
+        {service.title}
+      </h3>
+
+      <p className="leading-7 text-(--muted)">
+        {service.description}
+      </p>
+    </motion.div>
+  );
+};
+
 export default function Services() {
   return (
     <section className="bg-(--background) py-16 md:py-20 lg:py-24 transition-colors duration-300">
       <Container>
-        <SectionHeading
-          centered
-          subtitle="OUR SERVICES"
-          title="Travel Solutions For Every Journey"
-        />
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.7 }}
+        >
+          <SectionHeading
+            centered
+            subtitle="OUR SERVICES"
+            title="Travel Solutions For Every Journey"
+          />
+        </motion.div>
 
-        <div className="mt-16 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-          {services.map((service, index) => {
-            const Icon = service.icon;
+        {/* Mobile Carousel */}
+        <div className="mt-16 md:hidden">
+          <Swiper
+            modules={[Pagination, Autoplay]}
+            spaceBetween={20}
+            slidesPerView={1.1}
+            centeredSlides={false}
+            pagination={{ clickable: true }}
+            autoplay={{
+              delay: 3500,
+              disableOnInteraction: false,
+            }}
+          >
+            {services.map((service) => (
+              <SwiperSlide key={service.title}>
+                {card(service)}
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        </div>
 
-            return (
-              <motion.div
-                key={service.title}
-                initial={{ opacity: 0, y: 40 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{
-                  duration: 0.5,
-                  delay: index * 0.1,
-                }}
-                viewport={{ once: true }}
-                className="group rounded-3xl border border-(--border) bg-(--card) p-8 transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl"
-              >
-                {/* Icon */}
-                <div className="mb-6 flex h-16 w-16 items-center justify-center rounded-2xl bg-cyan-500/10">
-                  <Icon
-                    size={34}
-                    className="text-(--primary)"
-                  />
-                </div>
-
-                {/* Title */}
-                <h3 className="mb-4 text-2xl font-semibold text-(--foreground)">
-                  {service.title}
-                </h3>
-
-                {/* Description */}
-                <p className="leading-7 text-(--muted)">
-                  {service.description}
-                </p>
-              </motion.div>
-            );
-          })}
+        {/* Tablet & Desktop Grid */}
+        <div className="mt-16 hidden gap-8 md:grid md:grid-cols-2 lg:grid-cols-3">
+          {services.map((service, index) => (
+            <motion.div
+              key={service.title}
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{
+                duration: 0.5,
+                delay: index * 0.12,
+              }}
+            >
+              {card(service)}
+            </motion.div>
+          ))}
         </div>
       </Container>
     </section>

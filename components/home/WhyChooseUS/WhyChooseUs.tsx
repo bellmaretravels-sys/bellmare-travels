@@ -1,3 +1,6 @@
+"use client";
+
+import { motion } from "framer-motion";
 import {
   ShieldCheck,
   Clock3,
@@ -35,6 +38,46 @@ const features = [
   },
 ];
 
+const containerVariants = {
+  hidden: {},
+  visible: {
+    transition: {
+      staggerChildren: 0.15,
+    },
+  },
+};
+
+const cardVariants = {
+  hidden: {
+    opacity: 0,
+    y: 40,
+  },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.6,
+      ease: "easeOut",
+    },
+  },
+};
+
+const iconVariants = {
+  hidden: {
+    scale: 0,
+    rotate: -90,
+  },
+  visible: {
+    scale: 1,
+    rotate: 0,
+    transition: {
+      duration: 0.5,
+      ease: "backOut",
+      delay: 0.2,
+    },
+  },
+};
+
 export default function WhyChooseUs() {
   return (
     <section
@@ -42,36 +85,65 @@ export default function WhyChooseUs() {
       style={{ background: "var(--background)" }}
     >
       <Container>
-        <SectionHeading
-          centered
-          subtitle="WHY CHOOSE US"
-          title="Travel With Confidence"
-        />
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.3 }}
+          transition={{ duration: 0.7 }}
+        >
+          <SectionHeading
+            centered
+            subtitle="WHY CHOOSE US"
+            title="Travel With Confidence"
+          />
+        </motion.div>
 
-        <div className="mt-16 grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+        <motion.div
+          className="mt-16 grid gap-8 md:grid-cols-2 lg:grid-cols-4"
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.2 }}
+        >
           {features.map((feature) => {
             const Icon = feature.icon;
 
             return (
-              <div
+              <motion.div
                 key={feature.title}
-                className="rounded-2xl border p-8 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl"
+                variants={cardVariants}
+                whileHover={{
+                  y: -10,
+                  scale: 1.03,
+                }}
+                transition={{
+                  type: "spring",
+                  stiffness: 300,
+                  damping: 20,
+                }}
+                className="rounded-2xl border p-8 shadow-sm transition-all duration-300"
                 style={{
                   background: "var(--card)",
                   borderColor: "var(--border)",
                 }}
               >
-                <div
+                <motion.div
+                  variants={iconVariants}
+                  whileHover={{
+                    rotate: 10,
+                    scale: 1.1,
+                  }}
                   className="mb-6 flex h-16 w-16 items-center justify-center rounded-xl"
                   style={{
-                    background: "color-mix(in srgb, var(--primary) 12%, transparent)",
+                    background:
+                      "color-mix(in srgb, var(--primary) 12%, transparent)",
                   }}
                 >
                   <Icon
                     size={32}
                     style={{ color: "var(--primary)" }}
                   />
-                </div>
+                </motion.div>
 
                 <h3
                   className="mb-4 text-xl font-semibold"
@@ -80,13 +152,16 @@ export default function WhyChooseUs() {
                   {feature.title}
                 </h3>
 
-                <p style={{ color: "var(--muted)" }}>
+                <p
+                  className="leading-7"
+                  style={{ color: "var(--muted)" }}
+                >
                   {feature.description}
                 </p>
-              </div>
+              </motion.div>
             );
           })}
-        </div>
+        </motion.div>
       </Container>
     </section>
   );
