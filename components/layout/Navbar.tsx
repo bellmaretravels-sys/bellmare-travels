@@ -20,7 +20,7 @@ export default function Navbar({ scrolled }: NavbarProps) {
     <>
       <nav className="flex h-20 items-center justify-between">
         {/* Logo */}
-        <Logo scrolled={scrolled} />
+        <Logo />
 
         {/* Desktop Navigation */}
         <div className="hidden lg:block">
