@@ -43,7 +43,7 @@ export default function MobileMenu({
           >
             {/* Header */}
             <div className="flex items-center justify-between border-b border-(--border) p-6">
-              <Logo scrolled />
+              <Logo />
 
               <button
                 onClick={onClose}
