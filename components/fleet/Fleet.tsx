@@ -89,7 +89,7 @@ export default function FleetSection() {
               }`}
             >
               {/* Image */}
-              <div className="relative overflow-hidden">
+              <div className="relative h-64 overflow-hidden">
                 <Image
                   src={bus.image}
                   alt={bus.name}
