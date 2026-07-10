@@ -1,9 +1,10 @@
 export const siteConfig = {
-  name: "Bellmare Travels",
-  description: "Premium bus rental and travel services across Kerala.",
-  url: "https://bellmaretravels.com",
-  phone: "+91 9999999999",
-  email: "info@bellmaretravels.com",
-  address: "Thrissur, Kerala",
+  name: "Bellmare Holidays",
+  description:
+  "Premium tourist bus rental and holiday travel services across Kerala.";
+  url: "https://bellmareholidays.com",
+  phone: "+91 9847776640",
+  email: "bellmaretravels@gmail.com",
+  address: "Ernakulam, Kerala",
   logo: "/logo.svg",
 };
