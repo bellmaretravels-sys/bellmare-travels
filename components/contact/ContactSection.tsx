@@ -74,7 +74,7 @@ export default function ContactSection() {
                   <Icon size={28} />
                 </div>
 
-                <h3 className="mt-6 text-xl font-semibold">{item.title}</h3>
+                <h3 className="mt-6 text-xl font-semibold text-black">{item.title}</h3>
 
                 <p className="mt-2 text-slate-600">{item.value}</p>
               </motion.a>
@@ -91,29 +91,29 @@ export default function ContactSection() {
             viewport={{ once: true }}
             className="rounded-3xl bg-white p-8 shadow-lg"
           >
-            <h3 className="text-3xl font-bold">Send Us a Message</h3>
+            <h3 className="text-3xl font-bold text-black">Send Us a Message</h3>
 
             <form className="mt-8 space-y-5">
               <input
                 placeholder="Full Name"
-                className="w-full rounded-xl border p-4 outline-none focus:border-blue-600"
+                className="w-full rounded-xl border text-black border-black p-4 outline-none focus:border-blue-600"
               />
 
               <input
                 type="email"
                 placeholder="Email Address"
-                className="w-full rounded-xl border p-4 outline-none focus:border-blue-600"
+                className="w-full rounded-xl border text-black border-black p-4 outline-none focus:border-blue-600"
               />
 
               <input
                 placeholder="Phone Number"
-                className="w-full rounded-xl border p-4 outline-none focus:border-blue-600"
+                className="w-full rounded-xl border text-black border-black p-4 outline-none focus:border-blue-600"
               />
 
               <textarea
                 rows={5}
                 placeholder="Your Message"
-                className="w-full rounded-xl border p-4 outline-none focus:border-blue-600"
+                className="w-full rounded-xl border text-black border-black p-4 outline-none focus:border-blue-600"
               />
 
               <button className="flex items-center gap-2 rounded-xl bg-blue-600 px-8 py-4 font-semibold text-white hover:bg-blue-700">

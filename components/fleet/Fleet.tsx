@@ -123,7 +123,7 @@ export default function FleetSection() {
                         className="flex items-center gap-3 rounded-xl bg-slate-100 p-3"
                       >
                         <Icon className="text-blue-600" size={20} />
-                        <span className="text-sm font-medium">{feature}</span>
+                        <span className="text-sm font-medium text-black">{feature}</span>
                       </div>
                     );
                   })}
