@@ -15,6 +15,10 @@ export default function Navbar() {
   const [open, setOpen] = useState(false);
   const pathname = usePathname();
   const isHomePage = pathname === "/";
+  const phoneNumber = "9847698881"; // Replace with your number
+  const message = encodeURIComponent(
+    "Hi! I'm interested in your travel packages."
+  );
 
   return (
     <>
@@ -31,7 +35,11 @@ export default function Navbar() {
         <div className="flex items-center gap-3">
           {/* Desktop CTA */}
           <div className="hidden lg:block">
-            <Button>Book Now</Button>
+            <Button>
+              <a href={`https://wa.me/${phoneNumber}?text=${message}`}>
+              Book Now
+              </a>
+              </Button>
           </div>
 
           {/* Theme Toggle */}

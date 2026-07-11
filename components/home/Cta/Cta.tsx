@@ -68,9 +68,7 @@ export default function CTA() {
             className="mt-8 text-4xl font-bold leading-tight md:text-6xl text-cyan-600"
           >
             Ready For Your
-            <span className="block text-cyan-400">
-              Next Adventure?
-            </span>
+            <span className="block text-cyan-400">Next Adventure?</span>
           </motion.h2>
 
           {/* Description */}
@@ -84,10 +82,9 @@ export default function CTA() {
             }}
             className="mx-auto mt-8 max-w-2xl text-lg leading-8 lg:text-zinc-500 text-white"
           >
-            Whether it's a family trip, corporate event, wedding,
-            airport transfer, or a Kerala tour, Bellmare Travels is
-            ready to make your journey safe, comfortable, and
-            memorable.
+            Whether it's a family trip, corporate event, wedding, airport
+            transfer, or a Kerala tour, Bellmare Travels is ready to make your
+            journey safe, comfortable, and memorable.
           </motion.p>
 
           {/* Buttons */}
@@ -130,8 +127,10 @@ export default function CTA() {
                 variant="outline"
                 className="flex items-center gap-2 border-white/30 bg-black/60 text-white backdrop-blur-sm hover:bg-black/50"
               >
-                <PhoneCall size={18} />
-                +91 9847698881
+                <a href="tel:+919847698881" className="flex">
+                  <PhoneCall size={18} />
+                  +91 9847776640
+                </a>
               </Button>
             </motion.div>
           </div>

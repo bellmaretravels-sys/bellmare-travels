@@ -25,9 +25,9 @@ const fleet = [
   },
   {
     id: 3,
-    name: "Mini Coach",
+    name: "Luxury Coach",
     image: "/images/bus/bus3.png",
-    seats: "26 Seater",
+    seats: "49 Seater",
     features: ["AC", "Comfort Seats", "LED TV"],
   },
 ];
@@ -86,10 +86,10 @@ export default function Fleet() {
                   ))}
                 </div>
 
-                <Button className="mt-8 flex w-full items-center justify-center gap-2">
+                {/* <Button className="mt-8 flex w-full items-center justify-center gap-2">
                   View Details
                   <ArrowRight size={18} />
-                </Button>
+                </Button> */}
               </div>
             </motion.div>
           ))}

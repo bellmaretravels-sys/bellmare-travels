@@ -29,12 +29,32 @@ const galleryImages = [
     title: "Airport Transfer",
   },
   {
-    src: "/images/bus/bus1.png",
-    title: "School Excursion",
+    src: "/images/gallery/gallery12.jpeg",
+    title: "School trip",
   },
   {
-    src: "/images/bus/bus1.png",
+    src: "/images/gallery/gallery7.jpeg",
     title: "Group Tour",
+  },
+  {
+    src: "/images/gallery/gallery8.jpeg",
+    // title: "Group Tour",
+  },
+  {
+    src: "/images/gallery/gallery9.jpeg",
+    // title: "Group Tour",
+  },
+  {
+    src: "/images/gallery/gallery10.jpeg",
+    // title: "Group Tour",
+  },
+  {
+    src: "/images/gallery/gallery11.jpeg",
+    // title: "Group Tour",
+  },
+  {
+    src: "/images/gallery/gallery13.jpeg",
+    // title: "Group Tour",
   },
 ];
 
@@ -80,7 +100,7 @@ export default function GallerySection() {
               <div className="relative h-72 overflow-hidden">
                 <Image
                   src={image.src}
-                  alt={image.title}
+                  alt={image.title ?? "Gallery Image"}
                   fill
                   className="object-cover transition duration-500 group-hover:scale-110"
                 />

@@ -46,6 +46,10 @@ const slides = [
 ];
 
 export default function Hero() {
+  const phoneNumber = "9847698881"; // Replace with your number
+  const message = encodeURIComponent(
+    "Hi! I'm interested in your travel packages.",
+  );
   return (
     <section className="relative h-screen overflow-hidden">
       <Swiper
@@ -97,15 +101,12 @@ export default function Hero() {
                     {slide.badge}
                   </span>
 
-
                   <div className="p-5 mt-3 bg-black/40">
                     {/* Heading */}
                     <h1 className="text-2xl font-extrabold leading-tight lg:text-5xl">
                       {slide.title}
 
-                      <span className="mt-2 block">
-                        {slide.highlight}
-                      </span>
+                      <span className="mt-2 block">{slide.highlight}</span>
                     </h1>
                     {/* Description */}
                     <p className="mt-6 max-w-xl text-lg leading-8 text-gray-200">
@@ -116,7 +117,9 @@ export default function Hero() {
                   {/* Buttons */}
                   <div className="mt-10 flex flex-wrap gap-4">
                     <Button className="flex items-center gap-2">
-                      Book Now
+                      <a href={`https://wa.me/${phoneNumber}?text=${message}`}>
+                        Book Now
+                      </a>
                       <ArrowRight size={18} />
                     </Button>
 
@@ -125,7 +128,9 @@ export default function Hero() {
                       className="flex items-center gap-2 border-white/30 bg-white/10 text-white backdrop-blur hover:bg-white hover:text-black"
                     >
                       <PhoneCall size={18} />
-                      Call Us
+                      <a href="tel:+919847698881" className="flex">
+                        Call Us
+                      </a>
                     </Button>
                   </div>
 

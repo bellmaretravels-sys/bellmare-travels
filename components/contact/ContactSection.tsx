@@ -7,26 +7,26 @@ const contactInfo = [
   {
     icon: Phone,
     title: "Phone",
-    value: "+91 98765 43210",
-    href: "tel:+919876543210",
+    value: "+91 9847776640",
+    href: "tel:+91 9847776641",
   },
   {
     icon: Mail,
     title: "Email",
-    value: "info@bellmaretravels.com",
-    href: "mailto:info@bellmaretravels.com",
+    value: "Bellmaretravels@gmail.com",
+    href: "mailto:Bellmaretravels@gmail.com",
   },
   {
     icon: MapPin,
     title: "Office",
-    value: "Thrissur, Kerala, India",
+    value: "Edavanakkad, Ernakulam, Kerala",
     href: "#",
   },
   {
     icon: MessageCircle,
     title: "WhatsApp",
     value: "Chat With Us",
-    href: "https://wa.me/919876543210",
+    href: "https://wa.me/+919847776640",
   },
 ];
 
