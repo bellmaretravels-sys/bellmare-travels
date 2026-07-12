@@ -2,18 +2,17 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { ArrowRight, Users, Snowflake, Wifi } from "lucide-react";
+import { Users, Snowflake, Wifi } from "lucide-react";
 
 import Container from "@/components/common/Container";
 import SectionHeading from "@/components/common/SectionHeading";
-import Button from "@/components/common/Button";
 
 const fleet = [
   {
     id: 1,
-    name: "Luxury Volvo Coach",
+    name: "Executive Mini Coach",
     image: "/images/bus/bus1.png",
-    seats: "39 Seater",
+    seats: "35 Seater",
     features: ["AC", "WiFi", "Charging Port"],
   },
   {

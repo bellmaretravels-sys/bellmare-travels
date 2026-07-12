@@ -23,7 +23,7 @@ const fleet = [
   {
     name: "Executive Mini Bus",
     image: "/images/gallery/gallery2.png",
-    seats: "27 Seats",
+    seats: "35 Seats",
     description:
       "Perfect for family trips, airport transfers, and corporate transportation.",
     features: ["Air Conditioning", "Comfort Seats", "Music System"],
@@ -31,7 +31,7 @@ const fleet = [
   {
     name: "Tourist Coach",
     image: "/images/bus/bus-img-bright1.png",
-    seats: "40 Seats",
+    seats: "49 Seats",
     description:
       "Spacious coach suitable for school excursions, pilgrimages, and group tours.",
     features: ["Air Conditioning", "Large Luggage Space", "Reclining Seats"],

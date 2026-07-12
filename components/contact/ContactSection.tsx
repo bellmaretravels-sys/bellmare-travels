@@ -132,7 +132,7 @@ export default function ContactSection() {
           >
             <iframe
               title="Google Map"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15712.408145417852!2d76.20622700000001!3d10.090724999999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b081119e5e7aacd%3A0x94533f42fbd319d4!2sEdavanakkad%2C%20Vypin%2C%20Kerala%20682502!5e0!3m2!1sen!2sin!4v1783135700729!5m2!1sen!2sin"
+              src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3927.9263562945653!2d76.20112597503257!3d10.10511409000574!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTDCsDA2JzE4LjQiTiA3NsKwMTInMTMuMyJF!5e0!3m2!1sen!2sin!4v1783867107068!5m2!1sen!2sin"
               width="600"
               height="450"
               loading="lazy"
